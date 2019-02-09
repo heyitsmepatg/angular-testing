@@ -1,7 +1,11 @@
-Jenkinsfile (Declarative Pipeline)
 pipeline {
     agent any
     stages {
+        stage('myStage'){
+      steps {
+        sh 'ls -la' 
+      }
+    }
         stage('build') {
             steps {
                 sh 'echo "Hello World"'
