@@ -15,6 +15,7 @@ pipeline {
             steps {
                 sh 'npm install'
                 sh 'npm install -g @angular/cli'
+                sh 'export CHROME_BIN=/usr/bin/chromium-browser'
             }
         }
         stage('test') {
